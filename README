@@ -1,0 +1,22 @@
+docker build -t petstore .
+
+docker run -it -d --name petshop -p 8080:8080 petstore:latest
+
+access this application using:
+http://public ip:8080/jpetstore
+
+                    OR
+
+docker login 
+
+docker tag petstore:latest sindhukorampalli/petstore:latest
+docker push sindhukorampalli/petstore:latest
+
+use this "sindhukorampalli/petstore:latest" in your "deployment.yaml"  file
+
+access this application using:
+http://EXTERNAL-IP:80/jpetstore/
+
+OR
+
+http://EXTERNAL-IP/jpetstore/
